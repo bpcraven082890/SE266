@@ -26,9 +26,12 @@
       <file leaf-file-name="mult.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mult.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <folding>
+                <marker date="1506970022502" expanded="true" signature="181:200" ph="..." />
+                <marker date="1506970022502" expanded="true" signature="248:278" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,7 +132,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2781000" />
+    <option name="totallyTimeSpent" value="3178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1280" height="1400" extended-state="0" />
@@ -193,9 +196,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mult.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <marker date="1506970022502" expanded="true" signature="181:200" ph="..." />
+            <marker date="1506970022502" expanded="true" signature="248:278" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
