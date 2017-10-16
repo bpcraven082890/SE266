@@ -20,6 +20,8 @@ function getDogsAsTable($db)
                 $table .= "<tr><td>" . $dog['name'];
                 $table .= "</td><td>" . $dog['gender'];
                 $table .= "</td><td>" . $dog['fixed'];
+                $table .= "</td><td><form action='#' method='post'><input type='hidden' name='id' value='". $dog['id']."' /><input type='submit' name='action' value='Edit' /></form>";
+                $table .= "</td><td><form action='#' method='post'><input type='hidden' name='id' value='". $dog['id']."' /><input type='submit' name='action' value='Delete' /></form>";
                 $table .= "</td></tr>";
             }
             $table .= "</table>" . PHP_EOL;
@@ -33,13 +35,7 @@ function getDogsAsTable($db)
     {
         die("There was a problem retrieving the dogs");
     }
-    /*if(count($results))
-    {
-        foreach($results as $dog)
-        {
-            print_r($dog);
-        }
-    }*/
+
 
 }
 
