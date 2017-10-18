@@ -1,13 +1,5 @@
 <?php
-echo var_dump($_POST);
-if(isset($_POST['action'])){
-    $action = $_POST['action'];
-    if($action=='add'){
-        echo "adding data!<br/>";
-    }else{
-        echo "not adding data!<br/>";
-    }
-}
+
 
 ?>
 <!DOCTYPE html>
