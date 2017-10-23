@@ -10,7 +10,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Corporations</title>
     <!-- css goes here -->
     <!-- javascript goes here -->
 </head>
