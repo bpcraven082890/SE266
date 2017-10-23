@@ -1,5 +1,5 @@
 <?php
-require_once ("DBSubmissions/dbConn.php");
+require_once("DBSubmissions/dbConn.php");
 require_once ("DBSubmissions/actorsFunctions.php");
 include_once ("DBSubmissions/header.php");
 $db = dbconn();

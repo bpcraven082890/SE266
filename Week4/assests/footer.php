@@ -7,7 +7,7 @@
  */
 ?>
 
-
+<a href="#">View</a>
 </section>
 <footer>
     Copyright &copy; <?php echo date("Y"); ?> Ben Craven. All Right Reserved.

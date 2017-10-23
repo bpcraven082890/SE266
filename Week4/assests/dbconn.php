@@ -7,7 +7,7 @@
  */
 function dbConn()
 {
-    $dsn = "mysql:host=localhost;dbname=PHPClassFall2017";
+    $dsn = "mysql:host=localhost;dbName=PHPClassFall2017";
     $username = "actors";
     $password = "se266";
     try {
