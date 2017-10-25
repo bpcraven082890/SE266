@@ -5,13 +5,15 @@
  * Date: 10/23/2017
  * Time: 12:09 PM
  */
-function addCorps($db, $corp, $email, $zipCode, $owner, $phone)
+require_once ("dbConn.php");
+function addCorps($db, $corp, $incorp_dt, $email, $zipcode, $owner, $phone)
 {
     try {
-        $sql = $db->prepare("INSERT INTO corps VALUES (null, :corp, 'NOW()', :email, :zipCode, :owner, :phone)");
+        $sql = $db->prepare("INSERT INTO corps VALUES (null, :corp, :incorp_dt, :email, :zipcode, :owner, :phone)");
         $sql->bindParam(':corp', $corp);
+        $sql->bindParam(':incorp_dt', $incorp_dt);
         $sql->bindParam(':email', $email);
-        $sql->bindParam(':zipCode', $zipCode);
+        $sql->bindParam(':zipcode', $zipcode);
         $sql->bindParam(':owner', $owner);
         $sql->bindParam(':phone', $phone);
         $sql->execute();
@@ -30,9 +32,10 @@ function getCorpsAsTable($db) {
             $table = "<table>" . PHP_EOL;
             foreach ( $string as $corp ) {
                 $table .= "<tr><td>" . $corp['corp'];
-                $table .= "</td><td><a href='corpsConn/viewCorps.php?action=read & id=<?php echo $corp[id] ?>'> Read </a>";
-                $table .= "</td><td><a href='corpsConn/corpsForm.php?action=update & id=<?php echo $corp[id] ?>'>Update </a>";
-                $table .= "</td><td><a href='#'>Delete</a>";
+                $table .= "</td><td><a href=\"corpsConn/viewCorps.php?id=" . $corp['id'] . "\">  Read </a>";
+                $table .= "</td><td><a href=\"corpsConn/update.php?id=" . $corp['id'] . "\"> Update </a>";
+                $table .= "</td><td><a href=\"corpsConn/delete.php?id=" . $corp['id'] . "\"> Delete </a>";
+                $table .= "<td style='display:none'>" . $corp['id'];
                 $table .= "</td></tr>";
             }
             $table .= "</table>" . PHP_EOL;
@@ -52,11 +55,16 @@ function getARecord($db, $id)
         $sql = $db->prepare("SELECT * FROM corps WHERE id = :id");
         $sql->bindParam(':id', $id, PDO::PARAM_INT);
         $sql->execute();
-        $string = $sql->fetchAll(PCO::FETCH_ASSOC);
+        $string = $sql->fetchAll(PDO::FETCH_ASSOC);
         if ( $sql->rowCount() > 0 ) {
             $table = "<table>" . PHP_EOL;
             foreach ( $string as $corp ) {
-                $table .= "<tr><td>" . $corp['corp'];
+                $table .= "<tr><td>Corporation:" . $corp['corp'];
+                $table .= "<tr><td>Incorporated:" . $corp['incorp_dt'];
+                $table .= "<tr><td>Email:" . $corp['email'];
+                $table .= "<tr><td>Zip Code:" . $corp['zipcode'];
+                $table .= "<tr><td>Owner:" . $corp['owner'];
+                $table .= "<tr><td>Phone:" . $corp['phone'];
                 $table .= "</td></tr>";
             }
             $table .= "</table>" . PHP_EOL;
@@ -69,4 +77,11 @@ function getARecord($db, $id)
     }
 }
 
+function isPostRequest() {
+    return ( filter_input(INPUT_SERVER, 'REQUEST_METHOD') === 'POST' );
+}
+
+function isGetRequest() {
+    return ( filter_input(INPUT_SERVER, 'REQUEST_METHOD') === 'GET' );
+}
 ?>

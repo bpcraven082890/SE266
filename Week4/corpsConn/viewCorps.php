@@ -5,12 +5,14 @@
  * Date: 10/23/2017
  * Time: 12:23 PM
  */
-require_once ("header.php");
+include_once ("header.php");
 require_once ("corpsFunctions.php");
-getCorpsAsTable($db);
+require_once ("dbConn.php");
+$db = dbConn();
 
-$id = $corp['id'];
-$db = ("SELECT * FROM corps WHERE id=$corp[id]");
+$id = filter_input(INPUT_GET, "id");
+
 echo getARecord($db, $id);
-require_once ("footer.php");
+
+include_once ("footer.php");
 ?>

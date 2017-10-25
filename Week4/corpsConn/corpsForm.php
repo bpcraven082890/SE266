@@ -13,8 +13,8 @@
     <label for='email'>Email Address: </label>
     <input type='text' name='email' id='email' value='' /><br />
 
-    <label for='zipCode'>Zip Code: </label>
-    <input type='text' name='zipCode' id='zipCode' value='' /><br />
+    <label for='zipcode'>Zip Code: </label>
+    <input type='text' name='zipcode' id='zipcode' value='' /><br />
 
     <label for='owner'>Owner: </label>
     <input type='text' name='owner' id='owner' value='' /><br />
