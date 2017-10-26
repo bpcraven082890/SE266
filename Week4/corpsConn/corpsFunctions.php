@@ -59,12 +59,12 @@ function getARecord($db, $id)
         if ( $sql->rowCount() > 0 ) {
             $table = "<table>" . PHP_EOL;
             foreach ( $string as $corp ) {
-                $table .= "<tr><td>Corporation:" . $corp['corp'];
-                $table .= "<tr><td>Incorporated:" . $corp['incorp_dt'];
-                $table .= "<tr><td>Email:" . $corp['email'];
-                $table .= "<tr><td>Zip Code:" . $corp['zipcode'];
-                $table .= "<tr><td>Owner:" . $corp['owner'];
-                $table .= "<tr><td>Phone:" . $corp['phone'];
+                $table .= "<tr><td>Corporation:  " . $corp['corp'];
+                $table .= "<tr><td>Incorporated:  " . $corp['incorp_dt'];
+                $table .= "<tr><td>Email:  " . $corp['email'];
+                $table .= "<tr><td>Zip Code:  " . $corp['zipcode'];
+                $table .= "<tr><td>Owner:  " . $corp['owner'];
+                $table .= "<tr><td>Phone:  " . $corp['phone'];
                 $table .= "</td></tr>";
             }
             $table .= "</table>" . PHP_EOL;

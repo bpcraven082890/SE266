@@ -28,5 +28,6 @@ if($sql->execute($binds) && $sql->rowCount() > 0)
     <?php if (!$isDeleted): ?>Not<?php endif; ?>
     Deleted
 </h1>
-
-<a href="<?php echo filter_input(INPUT_SERVER, "HTTP_REFERER"); ?>"> Go Back </a>
+<?php
+include_once "footer.php";
+?>

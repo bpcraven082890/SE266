@@ -7,7 +7,7 @@
  */
 ?>
 
-<a href="corpsConn/corpsForm.php">Add a Corporation</a>
+<a href="../index.php">Go back</a>
 </section>
 <footer>
     Copyright &copy; <?php echo date("Y"); ?> Ben Craven. All Right Reserved.
