@@ -50,3 +50,19 @@ function getEmployeesAsTable($db, $employees, $cols = null, $sortable = false) {
         return "<section>We have no employees to display</section>";
     endif;
 }
+
+function employeeForm($depts)
+{
+    $form = "<form method = 'post' action=''>";
+    $form .= "<select name='deptID'>" . PHP_EOL;
+    foreach($depts as $dept)
+    {
+        $form .= "<option value='" . $dept['dept_id'] . "'>";
+        $form .= $dept['dept_name'] . "</option>" . PHP_EOL;
+    }
+    $form .= "</select>" . PHP_EOL;
+
+
+    $form .= "</form>";
+    return $form;
+}

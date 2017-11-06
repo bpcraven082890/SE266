@@ -9,7 +9,7 @@ function getActorsAsTable($db) {
             foreach ( $actors as $actor ) {
                 $table .= "<tr><td>" . $actor['firstName'];
                 $table .= "</td><td>" . $actor['lastName'];
-                $table .= "</td><td>" . $actor['dob'];
+                $table .= "</td><td>" . strtotime($actor['dob']);
                 $table .= "</td><td>" . $actor['height'];
                 $table .= "</td></tr>";
             }

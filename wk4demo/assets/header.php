@@ -10,6 +10,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Employees</title>
+    <title><?php echo $title ?></title>
 </head>
 <body>
