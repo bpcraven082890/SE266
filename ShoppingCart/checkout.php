@@ -55,7 +55,7 @@ include_once("assets/header.php");
                 <p class="mb-1">Taxes Paid: $<?php echo round($tax,2) ?></p>
                 <p class="mb-1"><strong>Total: $<?php echo round($total,2) ?></strong></p>
                 <small class="text-muted">Date of purchase: <?php echo $today ?></small>
-                <p><input class="btn btn-primary" type="submit" value="Confirm Purchase &raquo;"></input>
+                <p><a class="btn btn-primary" href="confirm.php">Confirm Purchase &raquo;</a>
                     <a href="endsession.php" class="btn btn-secondary" >Clear Cart</a></p>
             </div>
         </div>
